@@ -6,32 +6,24 @@ from vlc import EventType
 vlcInstance = None
 player = None
 media = None
-premuto = False	#used to control preload
 
 
 #reset player when pressed
 def resetPlayer():
     #player.set_pause(1)
     player.set_position(0.015)
-    #player.audio_set_volume(100)
+    player.audio_set_volume(100)
 
 #pressed button
 def pressed():
-    global premuto
-    #premuto = True
     resetPlayer()
     player.set_pause(0)
     print('press')
+
 #place at start when ends
 def inPause(event):
-    global premuto
-    print(premuto)
-    if(premuto==False):
-	player.set_pause(1)	
-	player.set_position(0.0)
-		
-    else:
-	premuto = False
+    player.set_pause(1)	
+    player.set_position(0.0)
     
     
 if __name__ == '__main__':
