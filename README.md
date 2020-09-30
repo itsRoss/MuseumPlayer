@@ -5,6 +5,9 @@ Media Player uses vlc-python library to interact with vlc and to play a video on
 
 When connected to the power the raspberry automatically run the program after the lxde enviroment is setup.
 
+Important!
+Disable screensaver installig xscreensaver
+
 Autostart process:
 
 Create .desktop file to be run after Desktop is loaded
